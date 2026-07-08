@@ -1,0 +1,31 @@
+---
+// Person schema for the practitioner, per Site Architecture §9/§4's
+// authority-signal requirement. Linked to Organization via @id rather than
+// a duplicated inline object, both computed from the same `site` value so
+// they can never drift apart into two different URLs for the same entity.
+// Veteran status is deliberately not represented here, that fact belongs
+// in About's prose with the established approved phrasing, not in
+// structured data.
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': new URL('/#founder', site).toString(),
+  name: 'Utomy McLamb',
+  jobTitle: 'Founder, Uncrashable Holdings',
+  worksFor: {
+    '@id': new URL('/#organization', site).toString(),
+  },
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'license',
+    name: 'Series 65, Uniform Investment Adviser Law Examination',
+  },
+  memberOf: {
+    '@type': 'Organization',
+    name: 'Your Money Matters',
+  },
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(person)} />

@@ -1,0 +1,26 @@
+---
+import { getCollection, render } from 'astro:content';
+import FrameworkLayout from '../../layouts/FrameworkLayout.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('diagnostics');
+  return pages
+    .filter((page) => page.id.replace(/\.md$/, '') !== 'diagnostics')
+    .map((page) => ({
+      params: { slug: page.id.replace(/\.md$/, '') },
+      props: { page },
+    }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+<FrameworkLayout
+  title={page.data.title}
+  exclusiveResponsibility={page.data.exclusiveResponsibility}
+  status={page.data.status}
+  evidenceLevel={page.data.evidenceLevel}
+  faq={page.data.faq}
+>
+  <Content />
+</FrameworkLayout>

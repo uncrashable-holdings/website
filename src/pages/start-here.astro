@@ -1,0 +1,44 @@
+---
+import OrganizationSchema from '../components/OrganizationSchema.astro';
+import PersonSchema from '../components/PersonSchema.astro';
+import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+const crumbs = [
+  { name: 'Home', url: site.toString() },
+  { name: 'Start Here', url: new URL('/start-here', site).toString() },
+];
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Start Here — Uncrashable Holdings</title>
+    <meta
+      name="description"
+      content="An orientation guide for anyone arriving from a conversation, a workshop, or a referral, walking through Invisible Fragility, AOIDR, the diagnostics, and Continuity Architecture in order."
+    />
+    <OrganizationSchema />
+    <PersonSchema />
+    <BreadcrumbSchema crumbs={crumbs} />
+  </head>
+  <body style="background:#1A1A1A; color:#F5F2EA; font-family:Arial, sans-serif; max-width:700px; margin:0 auto; padding:3rem 1.5rem; line-height:1.7;">
+    <p>
+      If you found this site through a conversation, a workshop, or someone else's mention of it, and you're not sure where to begin, start here.
+    </p>
+    <ol style="padding-left: 1.25rem;">
+      <li>
+        Understand the problem. <a href="/framework/invisible-fragility" style="color:#B8974E;">Invisible Fragility</a> names the condition that makes stable things quietly vulnerable.
+      </li>
+      <li>
+        Learn the framework. <a href="/framework/aoidr" style="color:#B8974E;">AOIDR</a> breaks continuity into five examinable pillars: Authority, Ownership, Income, Documentation, Resilience.
+      </li>
+      <li>
+        See how it's examined. The <a href="/diagnostics" style="color:#B8974E;">diagnostics</a> move from a five-question <a href="/diagnostics/continuity-scan" style="color:#B8974E;">Continuity Scan</a>, to a full <a href="/diagnostics/ifi" style="color:#B8974E;">Invisible Fragility Index</a>, to a <a href="/diagnostics/continuity-stress-test" style="color:#B8974E;">Continuity Stress Test</a>, depending on how deep the question requires.
+      </li>
+      <li>
+        Redesign the structure. <a href="/continuity-architecture" style="color:#B8974E;">Continuity Architecture</a> is what gets built once a diagnostic reveals something worth addressing.
+      </li>
+    </ol>
+    <p>There is no wrong place to enter. There is only a better place to begin.</p>
+  </body>
+</html>

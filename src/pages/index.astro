@@ -1,0 +1,41 @@
+---
+import OrganizationSchema from '../components/OrganizationSchema.astro';
+import PersonSchema from '../components/PersonSchema.astro';
+import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+const crumbs = [{ name: 'Home', url: site.toString() }];
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Uncrashable Holdings</title>
+    <meta
+      name="description"
+      content="Uncrashable doesn't mean nothing bad will happen. It means that when it does, what you built doesn't die in the wreck."
+    />
+    <OrganizationSchema />
+    <PersonSchema />
+    <BreadcrumbSchema crumbs={crumbs} />
+  </head>
+  <body style="background:#1A1A1A; color:#F5F2EA; font-family:Arial, sans-serif; max-width:700px; margin:0 auto; padding:3rem 1.5rem; line-height:1.7;">
+    <p style="font-size:1.25rem;">
+      <strong>Uncrashable doesn't mean nothing bad will happen. It means that when it does, and it will, what you built doesn't die in the wreck.</strong>
+    </p>
+    <p>Continuity matters more than appearance. What still works when life stops cooperating?</p>
+    <p>
+      Most planning asks how to optimize what already exists. Fewer ask what happens if the thing holding it all together disappears. That question has a name:
+      <a href="/framework/invisible-fragility" style="color:#B8974E;">Invisible Fragility</a>, the gap between looking stable and actually being able to withstand disruption.
+    </p>
+    <p>
+      Uncrashable Holdings built <a href="/framework/aoidr" style="color:#B8974E;">AOIDR</a> to diagnose it, five pillars, one framework, examined at increasing depth through the
+      <a href="/diagnostics" style="color:#B8974E;">diagnostics</a> that follow.
+    </p>
+    <p>
+      Start with the <a href="/diagnostics/continuity-scan" style="color:#B8974E;">Continuity Scan</a>. Five questions. No score. No diagnosis. Just the first honest look.
+    </p>
+    <p>
+      <a href="/about" style="color:#B8974E;">Read more about the practitioner behind this framework.</a>
+    </p>
+  </body>
+</html>

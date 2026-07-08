@@ -1,0 +1,23 @@
+---
+import { getCollection, render } from 'astro:content';
+import FrameworkLayout from '../../layouts/FrameworkLayout.astro';
+
+const pages = await getCollection('continuity-architecture');
+const page = pages.find((p) => p.id.replace(/\.md$/, '') === 'continuity-architecture');
+
+if (!page) {
+  throw new Error(
+    'Continuity Architecture page not found: expected src/content/continuity-architecture/continuity-architecture.md'
+  );
+}
+
+const { Content } = await render(page);
+---
+<FrameworkLayout
+  title={page.data.title}
+  exclusiveResponsibility={page.data.exclusiveResponsibility}
+  status={page.data.status}
+  evidenceLevel={page.data.evidenceLevel}
+>
+  <Content />
+</FrameworkLayout>

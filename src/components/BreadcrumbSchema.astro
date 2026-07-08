@@ -1,0 +1,22 @@
+---
+// BreadcrumbList JSON-LD, shared by every page (FrameworkLayout and the
+// home page) so the markup shape lives in one place. Each caller computes
+// its own crumbs from its actual position in the real site hierarchy,
+// this component only renders whatever trail it's given.
+interface Props {
+  crumbs: { name: string; url: string }[];
+}
+const { crumbs } = Astro.props;
+
+const breadcrumbList = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: crumbs.map((crumb, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: crumb.name,
+    item: crumb.url,
+  })),
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbList)} />

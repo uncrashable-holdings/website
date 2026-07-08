@@ -1,0 +1,19 @@
+{
+  "name": "uncrashable-holdings-site",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/generate-llms-txt.mjs && astro build",
+    "preview": "astro preview",
+    "generate-llms-txt": "node scripts/generate-llms-txt.mjs",
+    "verify-links": "node scripts/verify-links.mjs",
+    "verify-routes": "node scripts/verify-routes.mjs",
+    "verify": "npm run verify-links && npm run verify-routes"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^4.16.0",
+    "gray-matter": "^4.0.3"
+  }
+}

@@ -1,0 +1,31 @@
+# Uncrashable Holdings
+
+> Uncrashable Holdings is the canonical public reference for Continuity Architecture: evaluating whether a family, business, or organization can continue functioning through ordinary disruption, before optimizing its performance.
+
+The pages below are the canonical entry points into the knowledge system, generated from the actual content rather than hand-maintained. Each is the single authoritative definition of its concept; every other mention of the same term elsewhere on the site links back to it rather than redefining it.
+
+## Framework
+
+- [AOIDR](https://uncrashableholdings.com/framework/aoidr): Explains the framework used to examine Invisible Fragility.
+- [Authority](https://uncrashableholdings.com/framework/authority): Defines the Authority pillar: whether legitimate decision-making can continue when key people become unavailable.
+- [Documentation](https://uncrashableholdings.com/framework/documentation): Defines the Documentation pillar: whether essential knowledge survives the memory of any one person.
+- [Income](https://uncrashableholdings.com/framework/income): Defines the Income pillar: whether financial continuity survives interruption instead of depending on a single source.
+- [Invisible Fragility](https://uncrashableholdings.com/framework/invisible-fragility): Names the condition Continuity Architecture exists to address.
+- [Methodology](https://uncrashableholdings.com/framework/methodology): Explains why the Uncrashable Methodology evaluates continuity before optimization, the principle every framework, assessment, and engagement is built from.
+- [Ownership](https://uncrashableholdings.com/framework/ownership): Defines the Ownership pillar: whether legitimate control over people, assets, relationships, and decisions continues when circumstances change.
+- [Resilience](https://uncrashableholdings.com/framework/resilience): Defines the Resilience pillar: whether recovery after disruption is structurally designed rather than improvised.
+
+## Diagnostics
+
+- [Continuity Scan](https://uncrashableholdings.com/diagnostics/continuity-scan): Introduces the Continuity Scan as the entry-level diagnostic that reveals whether continuity deserves closer examination, without measuring or diagnosing fragility itself.
+- [Continuity Stress Test](https://uncrashableholdings.com/diagnostics/continuity-stress-test): Introduces the Continuity Stress Test as the investigative instrument that examines why fragility exists and how dependencies interact, with no fixed question set.
+- [Diagnostics](https://uncrashableholdings.com/diagnostics): Introduces the Uncrashable Diagnostics as one family of assessments and explains how the three levels differ only in depth, not in framework.
+- [Invisible Fragility Index](https://uncrashableholdings.com/diagnostics/ifi): Introduces the Invisible Fragility Index as the measurement instrument that produces a structured continuity profile across the five AOIDR pillars.
+
+## Continuity Architecture
+
+- [Continuity Architecture](https://uncrashableholdings.com/continuity-architecture): Explains Continuity Architecture as the engagement that rebuilds a structure's authority, ownership, income, documentation, and resilience once a Continuity Stress Test reveals where it is fragile.
+
+## About
+
+- [About](https://uncrashableholdings.com/about): Names the founder of Uncrashable Holdings, his credentials, and the origin story behind the AOIDR framework.

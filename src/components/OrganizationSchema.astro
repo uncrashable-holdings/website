@@ -1,0 +1,16 @@
+---
+// Organization JSON-LD belongs on every page, including the home page,
+// which does not use FrameworkLayout. Factored out here so both places
+// emit the exact same entity instead of two hand-typed copies drifting
+// apart, per Site Architecture's "consistent entity IDs" note.
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': new URL('/#organization', site).toString(),
+  name: 'Uncrashable Holdings',
+  url: site.toString(),
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(organization)} />

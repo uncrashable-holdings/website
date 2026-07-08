@@ -1,0 +1,83 @@
+---
+import OrganizationSchema from '../components/OrganizationSchema.astro';
+import PersonSchema from '../components/PersonSchema.astro';
+import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+
+interface Props {
+  title: string;
+  exclusiveResponsibility: string;
+  status: string;
+  evidenceLevel?: string;
+  // Set by the framework/[slug].astro route only. The five pillars, AOIDR,
+  // Invisible Fragility, and Methodology are the site's defined terms;
+  // diagnostics and continuity-architecture pages are not.
+  isFrameworkTerm?: boolean;
+  // Only set by pages whose own content declares a `faq` array in
+  // frontmatter. Currently just Continuity Scan and IFI.
+  faq?: { question: string; answer: string }[];
+}
+const { title, status, exclusiveResponsibility, isFrameworkTerm = false, faq } = Astro.props;
+
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+const pageUrl = new URL(Astro.url.pathname, site).toString();
+
+const definedTerm = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  name: title,
+  description: exclusiveResponsibility,
+  url: pageUrl,
+  inDefinedTermSet: new URL('/framework', site).toString(),
+};
+
+const faqPage = faq && faq.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    }
+  : null;
+
+// Breadcrumbs reflect the site's actual routing, not its conceptual
+// namespaces. /framework and /continuity-architecture have no hub page
+// that actually exists as a route, so a framework or continuity
+// architecture page's only real ancestor is Home. /diagnostics does have
+// a real hub page, so its sub-pages get an intermediate crumb.
+const segments = Astro.url.pathname.split('/').filter(Boolean);
+const crumbs = [{ name: 'Home', url: site.toString() }];
+if (segments[0] === 'diagnostics' && segments.length > 1) {
+  crumbs.push({ name: 'Diagnostics', url: new URL('/diagnostics', site).toString() });
+}
+crumbs.push({ name: title, url: pageUrl });
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title} — Uncrashable Holdings</title>
+    <meta name="description" content={exclusiveResponsibility} />
+    <OrganizationSchema />
+    <PersonSchema />
+    <BreadcrumbSchema crumbs={crumbs} />
+    {isFrameworkTerm && <script type="application/ld+json" set:html={JSON.stringify(definedTerm)} />}
+    {faqPage && <script type="application/ld+json" set:html={JSON.stringify(faqPage)} />}
+  </head>
+  <body style="background:#1A1A1A; color:#F5F2EA; font-family:Arial, sans-serif; max-width:700px; margin:0 auto; padding:3rem 1.5rem;">
+    <p style="font-size:0.875rem;">
+      <a href="/" style="color:#F5F2EA; text-decoration:none;">Uncrashable Holdings</a>
+    </p>
+    <p style="color:#B8974E; text-transform:uppercase; font-size:0.75rem; letter-spacing:0.1em;">
+      {status}
+    </p>
+    <h1 style="font-size:2rem;">{title}</h1>
+    <div style="line-height:1.7;">
+      <slot />
+    </div>
+  </body>
+</html>
