@@ -1,4 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 // This schema IS the Page Registry now. Every field that used to live in a
 // spreadsheet cell, hand-typed and hand-trusted, lives here as a validated
@@ -26,27 +28,27 @@ const pageSchema = z.object({
 });
 
 const framework = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/framework' }),
   schema: pageSchema,
 });
 
 const diagnostics = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/diagnostics' }),
   schema: pageSchema,
 });
 
 const continuityArchitecture = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/continuity-architecture' }),
   schema: pageSchema,
 });
 
 const about = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/about' }),
   schema: pageSchema,
 });
 
 const verticals = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/verticals' }),
   schema: pageSchema,
 });
 
