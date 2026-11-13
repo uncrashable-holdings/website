@@ -138,4 +138,4 @@ The purpose of the Uncrashable Methodology is not to eliminate risk.
 
 It is to reduce Invisible Fragility by strengthening the structures that allow people, organizations, and communities to continue.
 
-[Explore the Diagnostics →](/diagnostics)
+<a href="/diagnostics" class="action">Explore the Diagnostics →</a>

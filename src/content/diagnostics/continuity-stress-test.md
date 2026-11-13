@@ -50,7 +50,7 @@ The purpose of investigation is understanding.
 
 The purpose of understanding is design.
 
-The outcome of the Continuity Stress Test is [Continuity Architecture](/continuity-architecture).
+The outcome of the Continuity Stress Test is <a href="/continuity-architecture" class="action">Continuity Architecture</a>.
 
 Recommendations are not generic.
 

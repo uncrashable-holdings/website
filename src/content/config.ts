@@ -45,9 +45,15 @@ const about = defineCollection({
   schema: pageSchema,
 });
 
+const verticals = defineCollection({
+  type: 'content',
+  schema: pageSchema,
+});
+
 export const collections = {
   framework,
   diagnostics,
   'continuity-architecture': continuityArchitecture,
   about,
+  verticals,
 };

@@ -1,0 +1,17 @@
+---
+// Minimal top-level navigation, five destinations, text links only. No
+// dropdowns or sub-navigation, Site Architecture doesn't specify any for
+// the pillar pages or individual verticals, just these five. Hrefs are
+// written as literal strings, not built from a data array, so
+// verify-routes.mjs's static href scan can actually see and check them.
+// Color comes from FrameworkLayout's .site-nav stylesheet rules, not
+// inline styles, an inline color would beat the :hover rule and the
+// links could never brighten on hover.
+---
+<nav class="site-nav">
+  <a href="/framework/aoidr">Framework</a>
+  <a href="/diagnostics">Diagnostics</a>
+  <a href="/verticals">Applications</a>
+  <a href="/framework/methodology">Methodology</a>
+  <a href="/about">About</a>
+</nav>

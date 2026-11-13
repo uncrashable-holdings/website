@@ -57,4 +57,4 @@ Measurement identifies where fragility exists.
 
 It does not explain why.
 
-When understanding the structure itself becomes important, the [Continuity Stress Test](/diagnostics/continuity-stress-test) becomes the next level of examination.
+When understanding the structure itself becomes important, the <a href="/diagnostics/continuity-stress-test" class="action">Continuity Stress Test</a> becomes the next level of examination.

@@ -1,0 +1,21 @@
+---
+import { getCollection, render } from 'astro:content';
+import FrameworkLayout from '../../layouts/FrameworkLayout.astro';
+
+const pages = await getCollection('verticals');
+const page = pages.find((p) => p.id.replace(/\.md$/, '') === 'verticals');
+
+if (!page) {
+  throw new Error('Applications hub page not found: expected src/content/verticals/verticals.md');
+}
+
+const { Content } = await render(page);
+---
+<FrameworkLayout
+  title={page.data.title}
+  exclusiveResponsibility={page.data.exclusiveResponsibility}
+  status={page.data.status}
+  evidenceLevel={page.data.evidenceLevel}
+>
+  <Content />
+</FrameworkLayout>

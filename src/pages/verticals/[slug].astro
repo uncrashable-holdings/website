@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from 'astro:content';
+import FrameworkLayout from '../../layouts/FrameworkLayout.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('verticals');
+  return pages
+    .filter((page) => page.id.replace(/\.md$/, '') !== 'verticals')
+    .map((page) => ({
+      params: { slug: page.id.replace(/\.md$/, '') },
+      props: { page },
+    }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+<FrameworkLayout
+  title={page.data.title}
+  exclusiveResponsibility={page.data.exclusiveResponsibility}
+  status={page.data.status}
+  evidenceLevel={page.data.evidenceLevel}
+>
+  <Content />
+</FrameworkLayout>

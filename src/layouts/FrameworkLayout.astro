@@ -2,6 +2,7 @@
 import OrganizationSchema from '../components/OrganizationSchema.astro';
 import PersonSchema from '../components/PersonSchema.astro';
 import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+import Nav from '../components/Nav.astro';
 
 interface Props {
   title: string;
@@ -62,21 +63,110 @@ crumbs.push({ name: title, url: pageUrl });
     <meta charset="utf-8" />
     <title>{title} — Uncrashable Holdings</title>
     <meta name="description" content={exclusiveResponsibility} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style is:global>
+      /* Visual Doctrine v1.0
+         is:global is required here, not optional: Astro scopes a
+         component's <style> block to elements literally written in that
+         same file. .site-nav a targets anchors rendered by the Nav child
+         component, and .content a targets anchors from <slot /> (the
+         page's rendered Markdown), neither carries this file's scope
+         attribute, so a scoped rule would silently match nothing. */
+      :root {
+        --charcoal: #12141C;
+        --indigo-deep: #3B3F6B;
+        --indigo-bright: #7A80C4;
+        --gold: #C9A227;
+        --oxblood: #5C1A1B;
+        --cream: #F0EEE6;
+        --cream-dim: #8B8A94;
+      }
+
+      body {
+        background: var(--charcoal);
+        color: var(--cream);
+        font-family: 'Inter', Arial, sans-serif;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+
+      h1 {
+        font-family: 'Fraunces', Georgia, serif;
+        color: var(--indigo-bright);
+        font-size: 2rem;
+      }
+
+      .wordmark {
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 0.875rem;
+      }
+
+      .status-badge {
+        color: var(--indigo-deep);
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+      }
+
+      .site-nav {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+      }
+      .site-nav a {
+        color: var(--cream-dim);
+        text-decoration: none;
+        margin-right: 1rem;
+      }
+      .site-nav a:last-child {
+        margin-right: 0;
+      }
+      .site-nav a:hover {
+        color: var(--indigo-bright);
+      }
+
+      .content {
+        color: var(--cream);
+        line-height: 1.7;
+      }
+
+      /* Default markdown links: context role, per Visual Doctrine. */
+      .content a {
+        color: var(--indigo-bright);
+        text-decoration: underline;
+      }
+
+      /* The one genuine call-to-action per page. Applied by hand to a
+         specific link in the markdown body, raw HTML with class="action",
+         never inferred automatically from a plain <a>. */
+      .content a.action {
+        color: var(--gold);
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
     <OrganizationSchema />
     <PersonSchema />
     <BreadcrumbSchema crumbs={crumbs} />
     {isFrameworkTerm && <script type="application/ld+json" set:html={JSON.stringify(definedTerm)} />}
     {faqPage && <script type="application/ld+json" set:html={JSON.stringify(faqPage)} />}
   </head>
-  <body style="background:#1A1A1A; color:#F5F2EA; font-family:Arial, sans-serif; max-width:700px; margin:0 auto; padding:3rem 1.5rem;">
-    <p style="font-size:0.875rem;">
-      <a href="/" style="color:#F5F2EA; text-decoration:none;">Uncrashable Holdings</a>
+  <body>
+    <p>
+      <a href="/" class="wordmark">Uncrashable Holdings</a>
     </p>
-    <p style="color:#B8974E; text-transform:uppercase; font-size:0.75rem; letter-spacing:0.1em;">
+    <Nav />
+    <p class="status-badge">
       {status}
     </p>
-    <h1 style="font-size:2rem;">{title}</h1>
-    <div style="line-height:1.7;">
+    <h1>{title}</h1>
+    <div class="content">
       <slot />
     </div>
   </body>

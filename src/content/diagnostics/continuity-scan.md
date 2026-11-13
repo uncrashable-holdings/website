@@ -73,4 +73,4 @@ Others discover questions they have never considered.
 
 When the Scan reveals meaningful dependence, the next step is measurement.
 
-The [Invisible Fragility Index](/diagnostics/ifi) provides that deeper examination.
+The <a href="/diagnostics/ifi" class="action">Invisible Fragility Index</a> provides that deeper examination.

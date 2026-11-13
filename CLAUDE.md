@@ -1,6 +1,6 @@
 # Uncrashable Holdings — Writing Rules
 
-This project is the public knowledge system for Uncrashable Holdings' Continuity Architecture methodology. Content lives as content-collection markdown in `src/content/framework/`, validated against `src/content/config.ts`. These are the rules that actually constrain how a page gets written, drawn from the governance docs (Editorial Standards, Site Architecture v1.0, Publishing Governance, and the Invisible Fragility Writing Scaffold).
+This project is the public knowledge system for Uncrashable Holdings' Continuity Architecture methodology. Content lives as content-collection markdown in `src/content/framework/`, validated against `src/content/config.ts`. These are the rules that actually constrain how a page gets written, drawn from the governance docs, all six of which now live in `docs/governance/`: [Publishing Governance](docs/governance/publishing-governance.md) (names the four constitutional documents and the rules for amending them), [Editorial Standards](docs/governance/editorial-standards.md) (what becomes knowledge, prose voice), [Site Architecture v1.0](docs/governance/site-architecture.md) (where knowledge lives, page templates), the [Writing Scaffold](docs/governance/writing-scaffold.md) (how a specific page gets made well), the [Website Build Checklist](docs/governance/website-build-checklist.md) (the mechanical transfer runbook, not a fifth constitutional document), and [Visual Doctrine](docs/governance/visual-doctrine.md) (color and link-class rules specifically).
 
 ## Voice
 

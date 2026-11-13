@@ -105,10 +105,16 @@ function checkHref(source, href) {
   }
 }
 
-// Pass 1: markdown links in the body of every content-collection page.
+// Pass 1: every link in the body of every content-collection page.
 // Frontmatter is not prose, so it is not scanned here, verify-links.mjs
-// already governs that field.
+// already governs that field. Two link shapes are checked here too, not
+// just markdown-style [text](url): a page's "one genuine action link"
+// (Visual Doctrine's gold CTA treatment) is written as raw HTML with
+// class="action", precisely because standard markdown link syntax can't
+// carry a class. A body that mixes markdown links and raw <a> tags needs
+// both patterns checked, or the raw ones silently go unchecked.
 const MARKDOWN_LINK_RE = /\]\(([^)]+)\)/g;
+const HREF_ATTR_RE = /href=["']([^"']+)["']/g;
 
 console.log('\n--- Content Collection Link Check ---\n');
 
@@ -127,16 +133,16 @@ for (const collection of collections) {
     for (const match of content.matchAll(MARKDOWN_LINK_RE)) {
       checkHref(slug, match[1].trim());
     }
+    for (const match of content.matchAll(HREF_ATTR_RE)) {
+      checkHref(slug, match[1].trim());
+    }
   }
 }
 
 // Pass 2: hand-written .astro template files under src/pages/, src/layouts/,
 // and src/components/. These are not content-collection entries, so
-// nothing else in this project ever reads their links. Two link shapes are
-// checked: literal HTML href="..." attributes, and markdown-style
-// [text](url) links, in case one ever ends up inside a template literal
-// rather than rendered as a real anchor.
-const HREF_ATTR_RE = /href=["']([^"']+)["']/g;
+// nothing else in this project ever reads their links. Same two link
+// shapes as Pass 1.
 
 console.log('\n--- Page Template Link Check ---\n');
 

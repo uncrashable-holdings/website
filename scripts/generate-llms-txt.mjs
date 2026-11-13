@@ -30,6 +30,7 @@ function urlFor(collection, slug) {
   if (collection === 'diagnostics') return slug === 'diagnostics' ? '/diagnostics' : `/diagnostics/${slug}`;
   if (collection === 'continuity-architecture') return '/continuity-architecture';
   if (collection === 'about') return '/about';
+  if (collection === 'verticals') return `/verticals/${slug}`;
   throw new Error(
     `generate-llms-txt.mjs does not know how to build a URL for collection "${collection}". Add a case to urlFor().`
   );
@@ -45,7 +46,7 @@ function collectionTitle(collection) {
 // Preferred section order for known collections. Any collection not
 // listed here still gets a section, just after the known ones, so a new
 // collection can never silently go unlisted.
-const SECTION_ORDER = ['framework', 'diagnostics', 'continuity-architecture', 'about'];
+const SECTION_ORDER = ['framework', 'diagnostics', 'continuity-architecture', 'about', 'verticals'];
 
 const collections = fs
   .readdirSync(CONTENT_ROOT, { withFileTypes: true })
