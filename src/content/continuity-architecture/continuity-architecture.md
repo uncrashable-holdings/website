@@ -1,14 +1,14 @@
 ---
 title: "Continuity Architecture"
-exclusiveResponsibility: "Explains Continuity Architecture as the engagement that rebuilds a structure's authority, ownership, income, documentation, and resilience once a Continuity Stress Test reveals where it is fragile."
+exclusiveResponsibility: "Explains Continuity Architecture as the engagement that rebuilds a structure's authority, ownership, income, documentation, and resilience once the Invisible Fragility Index or a Continuity Stress Test reveals where it is fragile."
 status: "Published"
 evidenceLevel: "D"
-references: ["continuity-stress-test", "continuity-scan", "methodology"]
+references: ["continuity-stress-test", "continuity-scan", "methodology", "ifi"]
 lastUpdated: "2026-07-07"
 lastReviewed: "2026-07-07"
 ---
 
-**Continuity Architecture is the engagement in which Uncrashable Holdings redesigns the structures a Continuity Stress Test reveals to be fragile. It does not deliver a report. It delivers a rebuilt structure: documented authority, transferable ownership, diversified income, durable knowledge, and designed recovery. Every element is intentionally designed rather than left to chance. The engagement begins where diagnosis ends and continues until the structure can withstand the disruption it was built to survive.**
+**Continuity Architecture is the engagement in which Uncrashable Holdings redesigns the structures a diagnostic reveals to be fragile. It does not deliver a report. It delivers a rebuilt structure: documented authority, transferable ownership, diversified income, durable knowledge, and designed recovery. Every element is intentionally designed rather than left to chance. The engagement begins where diagnosis ends and continues until the structure can withstand the disruption it was built to survive.**
 
 ---
 
@@ -40,6 +40,8 @@ The [Continuity Stress Test](/diagnostics/continuity-stress-test) reveals where 
 
 Continuity Architecture is what gets built once that understanding exists.
 
+When the [Invisible Fragility Index](/diagnostics/ifi) shows fragility concentrated in a small number of places, the understanding may already be sufficient, and a scoped engagement can begin from the Index itself.
+
 Findings become architecture.
 
 Authority becomes documented.
@@ -56,17 +58,13 @@ Recommendations still exist.
 
 They are not the deliverable.
 
-## Three Tiers of Complexity
+## Individually Scoped
 
 Not every structure needs the same depth of rebuilding.
 
-**Core** addresses a concentrated dependency in a single pillar, or a small number of straightforward fixes.
+Each engagement is scoped individually, based on what the diagnostics found. A concentrated dependency in a single pillar calls for focused work. Dependencies that interact across several pillars call for coordinated structural change.
 
-**Advanced** addresses dependencies that interact across multiple pillars, requiring coordinated structural change.
-
-**Sovereign** addresses dependencies at the scale of an institution, a multi-generational estate, or a tribal enterprise, where the structure being architected is itself complex.
-
-The tier reflects the complexity of what was found, not the size of the invoice.
+Scope reflects the complexity of what was found, not the size of the invoice.
 
 ## What Comes After
 

@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+const crumbs = [{ name: 'Home', url: site.toString() }];
+---
+<BaseLayout
+  title="Page Not Found"
+  description="This page does not exist. Return to the home page or start with the diagnostics."
+  crumbs={crumbs}
+  noindex
+>
+  <h1>That page is not here.</h1>
+  <p>
+    The address may have changed, or the page may never have existed. <a href="/">Return to the home page</a>, or see the <a href="/diagnostics">diagnostics</a>.
+  </p>
+</BaseLayout>

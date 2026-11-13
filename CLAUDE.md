@@ -22,6 +22,8 @@ A page in any of these categories can be shorter than 60 words if it's still a c
 
 **Start Here is a fourth, stronger case: full exemption, not a word-count carve-out.** Per Site Architecture §4a, Start Here skips the direct-answer-block convention entirely, "this is the one page allowed to just be a map." It does not need a standalone opening statement of any length and is not held to the completeness test the three carve-outs above still are. Start Here is also deliberately unlinked from navigation, matching that page's specific job of catching someone who already arrived from outside context, not attracting new readers on its own.
 
+**Procedural pages (Contact, Privacy, Disclaimer, and any future page whose sole job is describing what happens after a visitor acts or stating terms):** exempt from the direct-answer block and evidenceLevel. Not exempt from the Canonical Link Rule, the banned-words list, the no-time-durations rule, or the no-em-dashes rule. Status starts at Published. These pages describe a process and never restate framework definitions; they link to the canonical page instead. They live as hand-written pages that use `BaseLayout.astro` and are not added to the verify-links standalone allowlist, so they confer no Editorial Gravity.
+
 ## Deferral paragraph (framework pillar pages only)
 
 Every AOIDR pillar page (Authority, Ownership, Income, Documentation, Resilience) needs a **deferral paragraph immediately after the direct-answer block**, before anything else, linking to `/framework/aoidr`. It must defer inter-pillar topology, never assert it. Structural pattern:

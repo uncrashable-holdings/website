@@ -7,7 +7,7 @@ lastUpdated: "2026-07-07"
 lastReviewed: "2026-07-07"
 ---
 
-**Utomy McLamb is the founder of Uncrashable Holdings and a Continuity Architect, the practitioner behind the AOIDR framework and the Invisible Fragility Index. His background includes a Series 65 license, and Uncrashable Holdings operates as a veteran-founded practice pursuing SDVOSB certification.**
+**Utomy McLamb is the founder of Uncrashable Holdings and a Continuity Architect, the practitioner behind the AOIDR framework and the Invisible Fragility Index. He has passed the Series 65 (Uniform Investment Adviser Law Examination), and Uncrashable Holdings operates as a veteran-founded practice pursuing SDVOSB certification.**
 
 ---
 

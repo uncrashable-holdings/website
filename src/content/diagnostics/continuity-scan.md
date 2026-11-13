@@ -65,6 +65,14 @@ Athletes.
 
 Anyone wondering whether continuity depends on more than they realized.
 
+## The First Conversation
+
+The Continuity Scan is not a form, and it is not scored.
+
+It is five questions, one from each pillar, asked as the first conversation about what keeps working when circumstances change.
+
+To begin one, [start a conversation](/contact).
+
 ## What Comes Next
 
 Some people finish the Scan with greater confidence.
@@ -74,3 +82,5 @@ Others discover questions they have never considered.
 When the Scan reveals meaningful dependence, the next step is measurement.
 
 The <a href="/diagnostics/ifi" class="action">Invisible Fragility Index</a> provides that deeper examination.
+
+Anyone who prefers to evaluate their own exposure independently can go directly to the Index that fits their situation.

@@ -147,3 +147,5 @@ No diagnosis.
 Just a clearer view of what still works without the owner.
 
 Start the Continuity Scan →
+
+To evaluate your exposure independently, take the [Business Owner Invisible Fragility Index](https://tally.so/r/7Rz9R0).

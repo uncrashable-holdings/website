@@ -149,3 +149,5 @@ No diagnosis.
 Just a clearer view of what still works without one person holding the household together.
 
 Start the Continuity Scan →
+
+To evaluate your exposure independently, take the [Household Invisible Fragility Index](https://tally.so/r/vG1xeD).

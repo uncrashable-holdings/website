@@ -1,0 +1,44 @@
+---
+// Procedural page. Regulatory wording here is flagged for legal and
+// compliance review in the launch notes before publication.
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+const crumbs = [
+  { name: 'Home', url: site.toString() },
+  { name: 'Disclaimer', url: new URL('/disclaimer', site).toString() },
+];
+---
+<BaseLayout
+  title="Disclaimer"
+  description="What this website and its diagnostics are, and what they are not."
+  crumbs={crumbs}
+>
+  <h1>Disclaimer</h1>
+
+  <p>Last updated November 13, 2026.</p>
+
+  <h2>Education and Planning, Not Advice</h2>
+  <p>
+    The content on this website is educational. It is not investment, legal, tax, or insurance advice, and it is not an offer to provide investment advisory services. Decisions about your finances, legal documents, taxes, or insurance should be made with qualified professionals who know your full situation.
+  </p>
+
+  <h2>Diagnostics Are Informational</h2>
+  <p>
+    The <a href="/diagnostics/continuity-scan">Continuity Scan</a> and the <a href="/diagnostics/ifi">Invisible Fragility Index</a> describe where continuity may depend on a single person, account, or process. They do not predict events, guarantee outcomes, or replace professional review.
+  </p>
+
+  <h2>No Relationship Is Formed by Visiting or Submitting</h2>
+  <p>
+    Using this website, completing a diagnostic, or sending a message through the <a href="/contact">contact form</a> does not create a client relationship. Any engagement begins only under a written agreement.
+  </p>
+
+  <h2>Privacy</h2>
+  <p>
+    How information submitted through the website is handled is described on the <a href="/privacy">privacy page</a>.
+  </p>
+</BaseLayout>
+
+<style>
+  h2 { font-size: 1.4rem; margin-top: 2.5rem; }
+</style>

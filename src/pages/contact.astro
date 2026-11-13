@@ -1,0 +1,66 @@
+---
+// Procedural page: describes what happens after a visitor acts. It restates
+// no framework definitions; it links to the canonical page instead. Exempt
+// from the direct-answer block and evidenceLevel, not exempt from the
+// Canonical Link Rule or the writing rules. See CLAUDE.md.
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+const crumbs = [
+  { name: 'Home', url: site.toString() },
+  { name: 'Contact', url: new URL('/contact', site).toString() },
+];
+---
+<BaseLayout
+  title="Contact"
+  description="Start a conversation with Uncrashable Holdings. Send a message, then take the Invisible Fragility Index that fits your situation."
+  crumbs={crumbs}
+>
+  <h1>Start a Conversation</h1>
+
+  <p>
+    Use the form below to reach Uncrashable Holdings. Your message arrives as you send it, and you can complete an Index afterward if it fits.
+  </p>
+
+  <div class="form-frame">
+    <iframe
+      src="https://tally.so/embed/je6X8Y?hideTitle=1&transparentBackground=1"
+      title="Contact form: start a conversation with Uncrashable Holdings"
+      loading="lazy"
+      width="100%"
+      height="620"
+    ></iframe>
+  </div>
+  <p class="fallback">
+    The form not loading? <a href="https://tally.so/r/je6X8Y" rel="noopener">Open it in its own page</a>.
+    Please do not include account numbers, identification numbers, or sensitive medical or financial details in your message.
+  </p>
+
+  <h2>After You Send Your Message</h2>
+
+  <p>
+    If your question comes from a continuity concern, the next step is the <a href="/diagnostics/ifi">Invisible Fragility Index</a> that fits your situation. It lets you evaluate your own exposure at your own pace.
+  </p>
+  <ul>
+    <li><a href="https://tally.so/r/vG1xeD" rel="noopener">Household Invisible Fragility Index</a></li>
+    <li><a href="https://tally.so/r/7Rz9R0" rel="noopener">Business Owner Invisible Fragility Index</a></li>
+    <li><a href="https://tally.so/r/A7yMVy" rel="noopener">Nonprofit Invisible Fragility Index</a></li>
+  </ul>
+
+  <p>
+    What happens next depends on what the Index finds. When the findings concentrate in one or two areas, a scoped <a href="/continuity-architecture">Continuity Architecture</a> engagement may be the direct next step. When dependencies interact across several pillars, the <a href="/diagnostics/continuity-stress-test">Continuity Stress Test</a> comes first, to understand why before deciding what to build.
+  </p>
+
+  <p>
+    If you are not sure where to begin, the <a href="/diagnostics/continuity-scan">Continuity Scan</a> is the first conversation. Reaching out is not a pitch. It is a conversation about what you are seeing, and what, if anything, is worth doing about it.
+  </p>
+</BaseLayout>
+
+<style>
+  .form-frame { margin: 1.5rem 0 0.5rem; }
+  .form-frame iframe { border: 0; display: block; width: 100%; background: transparent; }
+  .fallback { font-size: 0.85rem; color: var(--cream-dim); }
+  h2 { font-size: 1.4rem; margin-top: 2.5rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.5rem; }
+</style>

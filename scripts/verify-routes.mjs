@@ -88,6 +88,10 @@ function checkHref(source, href) {
     return;
   }
 
+  // Fragment-only links (for example the skip link, "#main") point at an
+  // element on the same page, not at a route.
+  if (href.startsWith('#')) return;
+
   if (!href.startsWith('/')) {
     console.error(
       `UNSUPPORTED HREF: "${source}" links to "${href}", which is neither an absolute site path nor an external URL.`
@@ -98,6 +102,10 @@ function checkHref(source, href) {
 
   const pathOnly = href.split(/[?#]/)[0];
   const normalized = pathOnly.length > 1 ? pathOnly.replace(/\/$/, '') : pathOnly;
+
+  // Static files served from public/ (favicon, robots.txt, llms.txt) are
+  // real URLs but not generated routes.
+  if (fs.existsSync(path.join(ROOT, 'public', normalized)) && fs.statSync(path.join(ROOT, 'public', normalized)).isFile()) return;
 
   if (!validRoutes.has(normalized)) {
     console.error(`BROKEN HREF: "${source}" links to "${href}", which does not resolve to a real route.`);

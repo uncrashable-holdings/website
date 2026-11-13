@@ -1,44 +1,83 @@
 ---
-import OrganizationSchema from '../components/OrganizationSchema.astro';
-import PersonSchema from '../components/PersonSchema.astro';
-import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const site = Astro.site ?? new URL('https://uncrashableholdings.com');
 const crumbs = [{ name: 'Home', url: site.toString() }];
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Uncrashable Holdings</title>
-    <meta
-      name="description"
-      content="Uncrashable doesn't mean nothing bad will happen. It means that when it does, what you built doesn't die in the wreck."
-    />
-    <OrganizationSchema />
-    <PersonSchema />
-    <BreadcrumbSchema crumbs={crumbs} />
-  </head>
-  <body style="background:#1A1A1A; color:#F5F2EA; font-family:Arial, sans-serif; max-width:700px; margin:0 auto; padding:3rem 1.5rem; line-height:1.7;">
-    <p style="font-size:1.25rem;">
-      <strong>Uncrashable doesn't mean nothing bad will happen. It means that when it does, and it will, what you built doesn't die in the wreck.</strong>
-    </p>
-    <p>Continuity matters more than appearance. What still works when life stops cooperating?</p>
+<BaseLayout
+  title="Uncrashable Holdings"
+  description="Uncrashable doesn't mean nothing bad will happen. It means that when it does, what you built doesn't die in the wreck."
+  crumbs={crumbs}
+  isHome
+>
+  <div class="hero">
+    <svg
+      class="signal"
+      width="320"
+      height="96"
+      viewBox="0 0 1000 300"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="A steady line dips once, then rises above its baseline."
+    >
+      <line x1="80" y1="90" x2="80" y2="150" stroke="#3B3F6B" stroke-width="6" stroke-linecap="butt" />
+      <line x1="80" y1="150" x2="240" y2="150" stroke="#3B3F6B" stroke-width="6" stroke-linecap="butt" />
+      <path class="oxblood" d="M 240 150 L 280 190 L 320 150" stroke="#5C1A1B" stroke-width="6" stroke-linecap="butt" stroke-linejoin="miter" fill="none" />
+      <line x1="320" y1="150" x2="400" y2="150" stroke="#3B3F6B" stroke-width="6" stroke-linecap="butt" />
+      <path class="gold" d="M 400 150 L 440 110 L 480 150" stroke="#C9A227" stroke-width="6" stroke-linecap="butt" stroke-linejoin="miter" fill="none" />
+      <line x1="480" y1="150" x2="830" y2="150" stroke="#3B3F6B" stroke-width="6" stroke-linecap="butt" />
+    </svg>
+
+    <h1>Uncrashable doesn't mean nothing bad will happen.</h1>
+
+    <p>It means that when it does, and it will, what you built doesn't die in the wreck.</p>
+
+    <p class="dim">Continuity matters more than appearance. What still works when life stops cooperating?</p>
+
+    <div class="direct-answer">
+      <p>
+        Most planning asks how to optimize what already exists. Fewer ask what happens if the thing holding it all together disappears. That question has a name:
+        <a href="/framework/invisible-fragility">Invisible Fragility</a>, the gap between looking stable and actually being able to withstand disruption.
+      </p>
+    </div>
+
     <p>
-      Most planning asks how to optimize what already exists. Fewer ask what happens if the thing holding it all together disappears. That question has a name:
-      <a href="/framework/invisible-fragility" style="color:#B8974E;">Invisible Fragility</a>, the gap between looking stable and actually being able to withstand disruption.
+      Uncrashable Holdings built <a href="/framework/aoidr">AOIDR</a> to diagnose it, five pillars, one framework, examined at increasing depth through the
+      <a href="/diagnostics">diagnostics</a> that follow.
     </p>
+
     <p>
-      Uncrashable Holdings built <a href="/framework/aoidr" style="color:#B8974E;">AOIDR</a> to diagnose it, five pillars, one framework, examined at increasing depth through the
-      <a href="/diagnostics" style="color:#B8974E;">diagnostics</a> that follow.
+      The framework applies differently depending on where you stand. <a href="/verticals">Explore how it applies</a> to your world.
     </p>
-    <p>
-      Start with the <a href="/diagnostics/continuity-scan" style="color:#B8974E;">Continuity Scan</a>. Five questions. No score. No diagnosis. Just the first honest look.
+
+    <div class="cta-line">
+      <p>
+        Start with the <a href="/diagnostics/continuity-scan" class="action">Continuity Scan</a>. Five questions. No score. No diagnosis. Just the first honest look.
+      </p>
+    </div>
+
+    <p class="about-line">
+      <a href="/about">Read more about the practitioner behind this framework.</a>
     </p>
-    <p>
-      The framework applies differently depending on where you stand. <a href="/verticals" style="color:#B8974E;">Explore how it applies</a> to your world.
-    </p>
-    <p>
-      <a href="/about" style="color:#B8974E;">Read more about the practitioner behind this framework.</a>
-    </p>
-  </body>
-</html>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero { padding-top: 2.5rem; }
+  .signal { display: block; max-width: 100%; height: auto; margin-bottom: 2.5rem; }
+  .signal path { stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 2.2s ease-out forwards; }
+  .signal path.oxblood { animation-delay: 0.1s; }
+  .signal path.gold { animation-delay: 0.9s; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .signal path { animation: none; stroke-dashoffset: 0; }
+  }
+  .hero h1 { font-weight: 500; font-size: 2.1rem; max-width: 22ch; margin-bottom: 1.75rem; }
+  .dim { color: var(--cream-dim); }
+  .direct-answer { border-left: 2px solid var(--indigo-deep); padding-left: 1.25rem; margin: 2rem 0; }
+  .direct-answer p { font-weight: 500; }
+  .cta-line { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(122, 128, 196, 0.25); }
+  .about-line { margin-top: 2rem; font-size: 0.9rem; }
+  @media (max-width: 480px) { .hero h1 { font-size: 1.75rem; } }
+</style>

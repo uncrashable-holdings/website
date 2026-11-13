@@ -1,0 +1,57 @@
+---
+// Procedural page. Wording about service providers and retention is plain
+// description of the current setup and is flagged for owner confirmation and
+// legal review in the launch notes before publication.
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+const crumbs = [
+  { name: 'Home', url: site.toString() },
+  { name: 'Privacy', url: new URL('/privacy', site).toString() },
+];
+---
+<BaseLayout
+  title="Privacy"
+  description="What information Uncrashable Holdings collects through this website and its forms, how it is used, and who handles it."
+  crumbs={crumbs}
+>
+  <h1>Privacy</h1>
+
+  <p>Last updated November 13, 2026.</p>
+
+  <p>
+    This page explains what information Uncrashable Holdings LLC collects through this website and its forms, how that information is used, and which services handle it.
+  </p>
+
+  <h2>What This Website Collects</h2>
+  <p>
+    This website does not use accounts, advertising, or an analytics service, and Uncrashable Holdings does not set tracking cookies. Fonts are served from this website, not from a third party. The website's host receives the standard technical details any web server receives when a page is requested, such as an IP address, browser type, and the page requested.
+  </p>
+
+  <h2>Forms You Choose to Submit</h2>
+  <p>
+    The <a href="/contact">contact form</a> and the Invisible Fragility Index forms are provided by Tally, a third-party form service. What you type into a form is sent to Tally and to Uncrashable Holdings. The contact form is embedded on this website, so Tally may load its own resources on that page. Uncrashable Holdings also uses workflow and productivity tools, including Make and Google Workspace, to receive, organize, and report on submissions.
+  </p>
+  <p>
+    Please do not put account numbers, government identification numbers, passwords, or sensitive medical details in any form or message.
+  </p>
+
+  <h2>How Information Is Used</h2>
+  <p>
+    Information you submit is used to respond to your inquiry, to deliver and interpret the Invisible Fragility Index you completed, and to follow up on that conversation. Uncrashable Holdings does not sell personal information.
+  </p>
+
+  <h2>Your Choices</h2>
+  <p>
+    To ask what has been collected about you, or to ask that it be corrected or deleted, send a message through the <a href="/contact">contact form</a>.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    If this page changes, the date above changes with it. For the limits of what this website and its diagnostics are, see the <a href="/disclaimer">disclaimer</a>.
+  </p>
+</BaseLayout>
+
+<style>
+  h2 { font-size: 1.4rem; margin-top: 2.5rem; }
+</style>

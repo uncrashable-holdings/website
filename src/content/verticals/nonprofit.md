@@ -147,3 +147,5 @@ No diagnosis.
 Just a clearer view of what still works without leadership.
 
 <a href="/diagnostics/continuity-scan" class="action">Start the Continuity Scan →</a>
+
+To evaluate your exposure independently, take the [Nonprofit Invisible Fragility Index](https://tally.so/r/A7yMVy).

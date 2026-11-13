@@ -1,0 +1,188 @@
+---
+// Shared shell for every page on the site: head metadata, fonts, Visual
+// Doctrine styling, landmarks, navigation, and footer. FrameworkLayout wraps
+// this for collection-backed pages; Home, Start Here, Contact, Privacy,
+// Disclaimer, and 404 use it directly.
+//
+// Fonts are self-hosted through @fontsource-variable packages, so no
+// request goes to Google's servers when a visitor loads a page.
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/inter';
+import OrganizationSchema from '../components/OrganizationSchema.astro';
+import PersonSchema from '../components/PersonSchema.astro';
+import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  crumbs: { name: string; url: string }[];
+  // The home page title stands alone; every other page is "Title | Uncrashable Holdings".
+  isHome?: boolean;
+  noindex?: boolean;
+}
+const { title, description, crumbs, isHome = false, noindex = false } = Astro.props;
+
+const site = Astro.site ?? new URL('https://uncrashableholdings.com');
+const canonical = new URL(Astro.url.pathname, site).toString();
+const fullTitle = isHome ? title : `${title} | Uncrashable Holdings`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#12141C" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:site_name" content="Uncrashable Holdings" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <style is:global>
+      /* Visual Doctrine v1.0
+         is:global is required here, not optional: Astro scopes a
+         component's <style> block to elements literally written in that
+         same file. Nav, Footer, and slotted page content render anchors
+         that do not carry this file's scope attribute, so a scoped rule
+         would silently match nothing. */
+      :root {
+        --charcoal: #12141C;
+        --indigo-deep: #3B3F6B;
+        --indigo-bright: #7A80C4;
+        --gold: #C9A227;
+        --oxblood: #5C1A1B;
+        --cream: #F0EEE6;
+        --cream-dim: #8B8A94;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+
+      html { -webkit-text-size-adjust: 100%; }
+
+      body {
+        background: var(--charcoal);
+        color: var(--cream);
+        font-family: 'Inter Variable', 'Inter', Arial, sans-serif;
+        line-height: 1.7;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+
+      h1, h2, h3 {
+        font-family: 'Fraunces Variable', 'Fraunces', Georgia, serif;
+        color: var(--indigo-bright);
+      }
+      h1 { font-size: 2rem; line-height: 1.25; }
+
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        background: var(--gold);
+        color: var(--charcoal);
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        z-index: 10;
+      }
+      .skip-link:focus { left: 1rem; top: 1rem; }
+
+      a:focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 3px;
+      }
+
+      .wordmark {
+        color: var(--gold);
+        text-decoration: none;
+        font-family: 'Fraunces Variable', 'Fraunces', Georgia, serif;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+      }
+
+      .site-header p { margin: 0; }
+
+      .status-badge {
+        color: var(--indigo-bright);
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+      }
+
+      .site-nav {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1rem;
+      }
+      .site-nav a {
+        color: var(--cream-dim);
+        text-decoration: none;
+      }
+      .site-nav a:hover { color: var(--indigo-bright); }
+
+      .content, main { color: var(--cream); line-height: 1.7; }
+
+      /* Default links: context role, per Visual Doctrine. */
+      .content a, main a:not(.action) {
+        color: var(--indigo-bright);
+        text-decoration: underline;
+      }
+
+      /* The one genuine call-to-action per page. Applied by hand to a
+         specific link, raw HTML with class="action", never inferred from a
+         plain <a>. Underlined so it is not distinguished by color alone. */
+      main a.action {
+        color: var(--gold);
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: rgba(201, 162, 39, 0.5);
+        text-underline-offset: 3px;
+      }
+
+      .site-footer {
+        margin-top: 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(122, 128, 196, 0.25);
+        font-size: 0.8rem;
+        color: var(--cream-dim);
+      }
+      .site-footer a { color: var(--cream-dim); text-decoration: underline; }
+      .site-footer a:hover { color: var(--indigo-bright); }
+      .site-footer ul { list-style: none; margin: 0 0 1rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+
+      @media (max-width: 480px) {
+        body { padding: 2rem 1rem; }
+        h1 { font-size: 1.65rem; }
+      }
+    </style>
+    <OrganizationSchema />
+    <PersonSchema />
+    <BreadcrumbSchema crumbs={crumbs} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <p>
+        <a href="/" class="wordmark">Uncrashable Holdings</a>
+      </p>
+      <Nav />
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
