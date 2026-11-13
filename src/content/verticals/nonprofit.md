@@ -4,7 +4,7 @@ exclusiveResponsibility: "Applies the framework to founder dependence, governanc
 status: "Published"
 evidenceLevel: "D"
 references: ["continuity-scan", "aoidr", "invisible-fragility"]
-lastUpdated: "2026-07-07"
+lastUpdated: "2026-11-13"
 lastReviewed: "2026-07-07"
 ---
 
@@ -146,6 +146,6 @@ No diagnosis.
 
 Just a clearer view of what still works without leadership.
 
-<a href="/diagnostics/continuity-scan" class="action">Start the Continuity Scan →</a>
-
 To evaluate your exposure independently, take the [Nonprofit Invisible Fragility Index](https://tally.so/r/A7yMVy).
+
+<a href="/diagnostics/continuity-scan" class="action">Start the Continuity Scan →</a>

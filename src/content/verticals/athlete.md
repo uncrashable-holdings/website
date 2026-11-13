@@ -4,7 +4,7 @@ exclusiveResponsibility: "Applies the framework to earning-window and identity-t
 status: "Published"
 evidenceLevel: "D"
 references: ["aoidr", "invisible-fragility", "continuity-scan"]
-lastUpdated: "2026-07-07"
+lastUpdated: "2026-11-13"
 lastReviewed: "2026-07-07"
 ---
 
@@ -140,7 +140,7 @@ It is the one whose life can continue creating opportunity after competition is 
 
 ## The First Honest Look
 
-The <a href="/diagnostics/continuity-scan" class="action">Continuity Scan</a> introduces five questions, one from each AOIDR pillar.
+The [Continuity Scan](/diagnostics/continuity-scan) introduces five questions, one from each AOIDR pillar.
 
 No score.
 
@@ -148,4 +148,4 @@ No diagnosis.
 
 Just a clearer view of what still works when competition is no longer possible.
 
-Start the Continuity Scan →
+<a href="/diagnostics/continuity-scan" class="action">Start the Continuity Scan →</a>

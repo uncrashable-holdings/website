@@ -4,7 +4,7 @@ exclusiveResponsibility: "Explains Continuity Architecture as the engagement tha
 status: "Published"
 evidenceLevel: "D"
 references: ["continuity-stress-test", "continuity-scan", "methodology", "ifi"]
-lastUpdated: "2026-07-07"
+lastUpdated: "2026-11-13"
 lastReviewed: "2026-07-07"
 ---
 

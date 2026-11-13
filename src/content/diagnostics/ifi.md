@@ -4,7 +4,7 @@ exclusiveResponsibility: "Introduces the Invisible Fragility Index as the measur
 status: "Published"
 evidenceLevel: "D"
 references: ["continuity-stress-test", "continuity-architecture"]
-lastUpdated: "2026-07-07"
+lastUpdated: "2026-11-13"
 lastReviewed: "2026-07-07"
 faq:
   - question: "What is the Invisible Fragility Index?"

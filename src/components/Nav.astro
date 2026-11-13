@@ -1,6 +1,8 @@
 ---
 // Top-level navigation, text links only, no dropdowns or sub-navigation.
-// Five framework destinations plus Contact, added at launch. Hrefs are
+// Six primary destinations. Start Here is deliberately NOT linked here (see
+// CLAUDE.md and Site Architecture 4a). The Continuity Scan and the Invisible
+// Fragility Index are reached through Diagnostics and contextual CTAs. Hrefs are
 // written as literal strings, not built from a data array, so
 // verify-routes.mjs's static href scan can actually see and check them.
 // Color comes from the .site-nav rules in BaseLayout, not inline styles,
@@ -9,9 +11,9 @@
 ---
 <nav class="site-nav" aria-label="Primary">
   <a href="/framework/aoidr">Framework</a>
-  <a href="/diagnostics">Diagnostics</a>
   <a href="/verticals">Applications</a>
-  <a href="/framework/methodology">Methodology</a>
+  <a href="/diagnostics">Diagnostics</a>
+  <a href="/continuity-architecture">Architecture</a>
   <a href="/about">About</a>
   <a href="/contact">Contact</a>
 </nav>

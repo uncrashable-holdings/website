@@ -4,7 +4,7 @@ exclusiveResponsibility: "Applies the framework to equity, title, debt, and surv
 status: "Published"
 evidenceLevel: "D"
 references: ["aoidr", "invisible-fragility", "continuity-scan"]
-lastUpdated: "2026-07-07"
+lastUpdated: "2026-11-13"
 lastReviewed: "2026-07-07"
 ---
 
@@ -140,7 +140,7 @@ It is the one that can continue functioning when one person is no longer carryin
 
 ## The First Honest Look
 
-The <a href="/diagnostics/continuity-scan" class="action">Continuity Scan</a> introduces five questions, one from each AOIDR pillar.
+The [Continuity Scan](/diagnostics/continuity-scan) introduces five questions, one from each AOIDR pillar.
 
 No score.
 
@@ -148,6 +148,6 @@ No diagnosis.
 
 Just a clearer view of what still works without one person holding the household together.
 
-Start the Continuity Scan →
-
 To evaluate your exposure independently, take the [Household Invisible Fragility Index](https://tally.so/r/vG1xeD).
+
+<a href="/diagnostics/continuity-scan" class="action">Start the Continuity Scan →</a>

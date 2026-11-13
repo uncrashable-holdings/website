@@ -4,7 +4,7 @@ exclusiveResponsibility: "Introduces the Continuity Scan as the entry-level diag
 status: "Published"
 evidenceLevel: "D"
 references: ["ifi"]
-lastUpdated: "2026-07-07"
+lastUpdated: "2026-11-13"
 lastReviewed: "2026-07-07"
 faq:
   - question: "What is the Continuity Scan?"
@@ -21,7 +21,9 @@ faq:
 
 ---
 
-## Five Questions. Five Pillars.
+## Five Questions. Five Pillars. One Uncomfortable Possibility.
+
+**If you were unavailable for 90 days, what would stop working?**
 
 The Continuity Scan asks one question from each AOIDR pillar.
 
@@ -38,6 +40,40 @@ Resilience.
 Five questions cannot explain a structure.
 
 They can reveal whether one deserves attention.
+
+## The Questions
+
+These are the same five questions printed on the Continuity Scan card for each audience. There is nothing to submit and nothing is scored. Read them, notice which ones you cannot answer quickly, and choose the version that fits your situation: [Household](#household), [Business Owner](#business-owner), or [Nonprofit](#nonprofit).
+
+### Household
+
+1. **Authority.** Who can sign, act, and move funds when you're unavailable?
+2. **Ownership.** Are the accounts, policies, and property titled to the household, or to one person?
+3. **Income.** Does income continue when the people who earn it can't?
+4. **Documentation.** Could someone step into the role tomorrow without calling you?
+5. **Resilience.** When one piece fails, does the rest hold, or cascade?
+
+<a href="https://tally.so/r/vG1xeD" class="action">Take the Household Invisible Fragility Index</a>
+
+### Business Owner
+
+1. **Authority.** Who can sign, act, and move funds when leadership is unavailable?
+2. **Ownership.** Are the accounts, client list, contracts, and IP titled to the business, or to you?
+3. **Income.** Does revenue continue when the people who drive it can't?
+4. **Documentation.** Could someone step into the role tomorrow without calling you?
+5. **Resilience.** When one piece fails, does the rest hold, or cascade?
+
+<a href="https://tally.so/r/7Rz9R0" class="action">Take the Business Owner Invisible Fragility Index</a>
+
+### Nonprofit
+
+1. **Authority.** Who can sign, act, and move funds when leadership is unavailable?
+2. **Ownership.** Are the accounts, donor list, grants, and IP titled to the organization, or to a person?
+3. **Income.** Does funding continue when the people who raise it can't?
+4. **Documentation.** Could someone step into the role tomorrow without calling you?
+5. **Resilience.** When one piece fails, does the rest hold, or cascade?
+
+<a href="https://tally.so/r/A7yMVy" class="action">Take the Nonprofit Invisible Fragility Index</a>
 
 ## What the Scan Does
 
@@ -81,6 +117,6 @@ Others discover questions they have never considered.
 
 When the Scan reveals meaningful dependence, the next step is measurement.
 
-The <a href="/diagnostics/ifi" class="action">Invisible Fragility Index</a> provides that deeper examination.
+The [Invisible Fragility Index](/diagnostics/ifi) provides that deeper examination.
 
 Anyone who prefers to evaluate their own exposure independently can go directly to the Index that fits their situation.
