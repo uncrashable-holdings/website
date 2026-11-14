@@ -43,7 +43,7 @@ They can reveal whether one deserves attention.
 
 ## The Questions
 
-These are the same five questions printed on the Continuity Scan card for each audience. There is nothing to submit and nothing is scored. Read them, notice which ones you cannot answer quickly, and choose the version that fits your situation: [Household](#household), [Business Owner](#business-owner), or [Nonprofit](#nonprofit).
+There is nothing to submit and nothing is scored. Read them, notice which ones you cannot answer quickly, and choose the version that fits your situation: [Household](#household), [Business Owner](#business-owner), or [Nonprofit](#nonprofit).
 
 ### Household
 
