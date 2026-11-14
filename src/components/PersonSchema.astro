@@ -22,9 +22,15 @@ const person = {
     credentialCategory: 'examination',
     name: 'Series 65, Uniform Investment Adviser Law Examination',
   },
+  // Board member of Your Money Matters Mentoring (organization name and
+  // affiliation confirmed by the owner). A role, not an endorsement.
   memberOf: {
-    '@type': 'Organization',
-    name: 'Your Money Matters',
+    '@type': 'OrganizationRole',
+    roleName: 'Board Member',
+    memberOf: {
+      '@type': 'Organization',
+      name: 'Your Money Matters Mentoring',
+    },
   },
 };
 ---
