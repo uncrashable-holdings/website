@@ -57,7 +57,9 @@ const crumbs = [
 </BaseLayout>
 
 <style>
-  .form-frame { margin: 1.5rem 0 0.5rem; }
+  /* The Tally form renders dark text on a transparent background. On the
+     charcoal page that text is unreadable, so the form sits on a cream panel. */
+  .form-frame { margin: 1.5rem 0 0.5rem; background: var(--cream); border-radius: 6px; padding: 0.5rem 0.75rem; }
   .form-frame iframe { border: 0; display: block; width: 100%; background: transparent; }
   .fallback { font-size: 0.85rem; color: var(--cream-dim); }
   h2 { font-size: 1.4rem; margin-top: 2.5rem; }
