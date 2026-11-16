@@ -4,13 +4,11 @@ exclusiveResponsibility: "Explains that Invisible Fragility takes a different sh
 status: "Published"
 evidenceLevel: "D"
 references: ["homeowner", "business-owner", "nonprofit", "athlete", "aoidr"]
-lastUpdated: "2026-07-07"
+lastUpdated: "2026-11-16"
 lastReviewed: "2026-07-07"
 ---
 
-**The AOIDR framework does not change from one setting to another. What changes is how Invisible Fragility appears. A household depends on different structures than a nonprofit. A privately held business faces different continuity pressures than an athletic career. The framework remains consistent. Its application becomes specific.**
-
-Applications is the canonical hub for how the [AOIDR](/framework/aoidr) framework operates across different environments. The individual pages examine each application in depth, while the AOIDR page explains how the five pillars relate as a complete continuity model.
+**The [AOIDR](/framework/aoidr) framework does not change from one setting to another. What changes is how Invisible Fragility appears. A household depends on different structures than a nonprofit. A privately held business faces different continuity pressures than an athletic career. The framework remains consistent. Its application becomes specific.**
 
 ### Homeowner
 
