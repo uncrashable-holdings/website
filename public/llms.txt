@@ -35,5 +35,6 @@ The pages below are the canonical entry points into the knowledge system, genera
 - [Applications](https://uncrashableholdings.com/verticals/verticals): Explains that Invisible Fragility takes a different shape in each world and routes to each application
 - [Athlete Continuity](https://uncrashableholdings.com/verticals/athlete): Applies the framework to earning-window and identity-transition risk for athletes
 - [Business Continuity](https://uncrashableholdings.com/verticals/business-owner): Applies the framework to key-person dependence, succession, and operating continuity in privately held businesses
+- [Creative Continuity](https://uncrashableholdings.com/verticals/creatives): Applies the framework to rights, catalog, platform dependence, and uneven income for musicians, artists, and other creatives
 - [Home Continuity](https://uncrashableholdings.com/verticals/homeowner): Applies the framework to equity, title, debt, and survivor planning for households
 - [Nonprofit Continuity](https://uncrashableholdings.com/verticals/nonprofit): Applies the framework to founder dependence, governance, and funding concentration in nonprofits
