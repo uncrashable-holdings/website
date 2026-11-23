@@ -61,6 +61,8 @@ Choose the Index written for your situation.
 
 <a href="https://tally.so/r/A7yMVy" class="action">Nonprofit Invisible Fragility Index</a>
 
+<a href="https://tally.so/r/zEMW4k" class="action">Creatives Invisible Fragility Index</a>
+
 ## What Comes Next
 
 Measurement identifies where fragility exists.

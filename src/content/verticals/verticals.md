@@ -3,8 +3,8 @@ title: "Applications"
 exclusiveResponsibility: "Explains that Invisible Fragility takes a different shape in each world and routes to each application"
 status: "Published"
 evidenceLevel: "D"
-references: ["homeowner", "business-owner", "nonprofit", "athlete", "aoidr"]
-lastUpdated: "2026-07-07"
+references: ["homeowner", "business-owner", "nonprofit", "athlete", "creatives", "aoidr"]
+lastUpdated: "2026-11-20"
 lastReviewed: "2026-07-07"
 ---
 
@@ -43,3 +43,11 @@ Performance can create extraordinary opportunity while leaving the athlete's inc
 How athletic careers become the foundation for lives that outlast competition.
 
 [Explore Athlete →](/verticals/athlete)
+
+### Creatives
+
+A body of work can reach an audience while the rights, accounts, catalog, and income behind it still depend on one person and one platform.
+
+How musicians, artists, and other creatives keep their work, and the life it supports, running beyond the creator.
+
+[Explore Creatives →](/verticals/creatives)
